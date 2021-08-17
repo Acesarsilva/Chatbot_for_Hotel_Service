@@ -29,22 +29,74 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: find hotel happy path
+- story: book hotel happy path
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: find_hotel
-  - action: utter_hotel_found
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: book_hotel
+  - action: utter_hotel_booked
+  - action: utter_goodbye
 
-- story: find hotel sad path
+- story: book hotel sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: book_hotel
+  - action: utter_hotel_booked
+  - action: utter_goodbye
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: interactive_story_1
   steps:
   - intent: greet
   - action: utter_greet
   - intent: find_hotel
+  - action: hotel_info
+  - active_loop: hotel_info
+  - slot_was_set:
+    - requested_slot: num_people
+  - slot_was_set:
+    - num_people: '3'
+  - slot_was_set:
+    - requested_slot: price_range
+  - slot_was_set:
+    - price_range: expensive
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: '3'
+  - active_loop: null
   - action: utter_hotel_found
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: book_hotel
+  - action: utter_hotel_booked
+  - action: utter_goodbye
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: find_hotel
+  - action: hotel_info
+  - active_loop: hotel_info
+  - slot_was_set:
+    - requested_slot: num_people
+  - slot_was_set:
+    - num_people: '2'
+  - slot_was_set:
+    - requested_slot: price_range
+  - slot_was_set:
+    - price_range: cheap
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: '3'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_hotel_found
+  - intent: book_hotel
+  - action: utter_hotel_booked
   - action: utter_goodbye

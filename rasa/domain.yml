@@ -1,41 +1,70 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - find_hotel
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-  utter_hotel_found:
-  - text: "I have found this nice hotel in Recife called Recife Hotel"
-
-  utter_find:
-  - text: "There is a great hotel called Recife Hotel in Recife"
-
+version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- inform
+- book_hotel
+- find_hotel
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+entities:
+- num_people
+- price_range
+- time
+slots:
+  num_people:
+    type: text
+    influence_conversation: false
+  price_range:
+    type: text
+    influence_conversation: false
+  time:
+    type: text
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_hotel_found:
+  - text: I have found this nice hotel in Recife called Recife Hotel
+  utter_hotel_booked:
+  - text: reservation has been made
+  utter_ask_hotel_info_num_people:
+  - text: you need room for how many people?
+  utter_ask_hotel_info_price_range:
+  - text: in what price range are you looking?
+  utter_ask_hotel_info_time:
+  - text: how many nights you want to stay?
+actions:
+- utter_goodbye
+- utter_greet
+- utter_hotel_booked
+- utter_hotel_found
+forms:
+  hotel_info:
+    required_slots:
+      num_people:
+      - type: from_entity
+        entity: num_people
+      price_range:
+      - type: from_entity
+        entity: price_range
+      time:
+      - type: from_entity
+        entity: time

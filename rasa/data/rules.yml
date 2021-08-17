@@ -11,3 +11,9 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Find hotel form
+  steps:
+  - intent: find_hotel
+  - action: hotel_info
+  - active_loop: hotel_info
