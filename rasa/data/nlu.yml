@@ -94,15 +94,7 @@ nlu:
     - find
     - I wAnt to find a nice hotel
     - good, I need to find a hotel
-- intent: inform
-  examples: |
-    - [3](num_people)
-    - [expensive](price_range)
-    - [3](time) nights
-    - [cheap](price_range)
-    - I need room for [2](num_people) people
-    - I want something [cheap](price_range)
-    - [3](time) nights
+    - good, I need to find a good hotel
 - intent: book_hotel
   examples: |
     - I want to book a hotel room

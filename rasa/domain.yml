@@ -3,10 +3,9 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- inform
-- book_hotel
-- find_hotel
 - greet
+- find_hotel
+- book_hotel
 - goodbye
 - affirm
 - deny
@@ -14,17 +13,33 @@ intents:
 - mood_unhappy
 - bot_challenge
 entities:
-- num_people
-- price_range
-- time
+- hotel-area
+- hotel-internet
+- hotel-name
+- hotel-parking
+- hotel-pricerange
+- hotel-stars
+- hotel-type
 slots:
-  num_people:
+  hotel-name:
     type: text
     influence_conversation: false
-  price_range:
+  hotel-pricerange:
     type: text
     influence_conversation: false
-  time:
+  hotel-stars:
+    type: text
+    influence_conversation: false
+  hotel-type:
+    type: text
+    influence_conversation: false
+  hotel-area:
+    type: text
+    influence_conversation: false
+  hotel-internet:
+    type: text
+    influence_conversation: false
+  hotel-parking:
     type: text
     influence_conversation: false
 responses:
@@ -45,13 +60,14 @@ responses:
   - text: I have found this nice hotel in Recife called Recife Hotel
   utter_hotel_booked:
   - text: reservation has been made
-  utter_ask_hotel_info_num_people:
-  - text: you need room for how many people?
-  utter_ask_hotel_info_price_range:
+  utter_ask_hotel_info_hotel_stars:
+  - text: you are looking for a hotel with how many starts rate?
+  utter_ask_hotel_info_hotel_pricerange:
   - text: in what price range are you looking?
   utter_ask_hotel_info_time:
   - text: how many nights you want to stay?
 actions:
+- action_search_hotel
 - utter_goodbye
 - utter_greet
 - utter_hotel_booked
@@ -59,12 +75,21 @@ actions:
 forms:
   hotel_info:
     required_slots:
-      num_people:
+      hotel-stars:
       - type: from_entity
-        entity: num_people
-      price_range:
+        entity: hotel-stars
+      hotel-pricerange:
       - type: from_entity
-        entity: price_range
-      time:
+        entity: hotel-pricerange
+      hotel-type:
       - type: from_entity
-        entity: time
+        entity: hotel-type
+      hotel-area:
+      - type: from_entity
+        entity: hotel-area
+      hotel-internet:
+      - type: from_entity
+        entity: hotel-internet
+      hotel-parking:
+      - type: from_entity
+        entity: hotel-parking
