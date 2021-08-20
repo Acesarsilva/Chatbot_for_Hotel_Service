@@ -4,8 +4,8 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - greet
-- find_hotel
 - book_hotel
+- find_hotel
 - goodbye
 - affirm
 - deny
@@ -14,6 +14,8 @@ intents:
 - bot_challenge
 entities:
 - hotel-area
+- hotel-bookpeople
+- hotel-bookstay
 - hotel-internet
 - hotel-name
 - hotel-parking
@@ -21,6 +23,12 @@ entities:
 - hotel-stars
 - hotel-type
 slots:
+  hotel-bookstay:
+    type: text
+    influence_conversation: false
+  hotel-bookpeople:
+    type: text
+    influence_conversation: false
   hotel-name:
     type: text
     influence_conversation: false

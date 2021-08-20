@@ -52,3 +52,40 @@ stories:
   - action: utter_greet
   - intent: find_hotel
   - action: action_search_hotel
+
+- story: interactive_story_1
+  steps:
+  - intent: find_hotel
+    entities:
+    - hotel-pricerange: cheap
+  - slot_was_set:
+    - hotel-pricerange: cheap
+  - action: action_search_hotel
+  - intent: book_hotel
+    entities:
+    - hotel-bookstay: '2'
+    - hotel-bookpeople: '3'
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: find_hotel
+    entities:
+    - hotel-pricerange: cheap
+    - hotel-area: south
+  - slot_was_set:
+    - hotel-pricerange: cheap
+  - slot_was_set:
+    - hotel-area: south
+  - action: action_search_hotel
+  - intent: book_hotel
+    entities:
+    - hotel-bookpeople: '2'
+    - hotel-bookstay: '3'
+  - slot_was_set:
+    - hotel-bookstay: '3'
+  - slot_was_set:
+    - hotel-bookpeople: '2'
+  - action: utter_hotel_booked
+  - action: utter_goodbye
