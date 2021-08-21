@@ -1,0 +1,242 @@
+[
+  {
+    "text": "In the Centre please.",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.7859110236167908
+    }
+  },
+  {
+    "text": "That's fine. Please make a reservation for 3 people on Friday at 18:00, please.",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.6410408616065979
+    }
+  },
+  {
+    "text": "Okay great. That is all I need.",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.5118404030799866
+    }
+  },
+  {
+    "text": "Thanks. Can you book it for 7 people at 17:45 on Saturday please.",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.75241619348526
+    }
+  },
+  {
+    "text": "I would like it to be in the centre of town.",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.7551762461662292
+    }
+  },
+  {
+    "text": "I also need a restaurant. Same area as the hotel please.",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.5492914319038391
+    }
+  },
+  {
+    "text": "4 of us Friday at 14:45 I need the reference number too.",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.6169821619987488
+    }
+  },
+  {
+    "text": "Yes, 11:15 7 people on Saturday.",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.7790946364402771
+    }
+  },
+  {
+    "text": "How about one in the north?",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.47589370608329773
+    }
+  },
+  {
+    "text": "Yes, that would be fine. The Hobsons House sounds good.",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.5002143979072571
+    }
+  },
+  {
+    "text": "I'd like to leave Sunday after 18:30.",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.5989550352096558
+    }
+  },
+  {
+    "text": "I need it to arrive by 15:45 in Cambridge on Monday please.",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.641588032245636
+    }
+  },
+  {
+    "text": "It doesn't matter.",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.617060124874115
+    }
+  },
+  {
+    "text": "What is the price range of the alexander bed and breakfast alexander bed and breakfast alexander bed and breakfast Breakfast?",
+    "intent": "book_hotel",
+    "intent_prediction": {
+      "name": "find_hotel",
+      "confidence": 0.8781856894493103
+    }
+  },
+  {
+    "text": "No thank you that will be all",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.7756144404411316
+    }
+  },
+  {
+    "text": "Just the one, please.",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.6417744755744934
+    }
+  },
+  {
+    "text": "5 nights, starting from Thursday. For 3 people. Reference number please.",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.9886694550514221
+    }
+  },
+  {
+    "text": "Sure. Please book for 4 nights starting on the same day.",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.5272111892700195
+    }
+  },
+  {
+    "text": "Thank you so much.",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.5753958821296692
+    }
+  },
+  {
+    "text": "I will be staying 2 nights.",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.9124442338943481
+    }
+  },
+  {
+    "text": "Yes please make reservations for sunday for 3 people.",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.991154670715332
+    }
+  },
+  {
+    "text": "Okay can you please book it for 7 people for 4 nights starting on Tuesday?",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.995059609413147
+    }
+  },
+  {
+    "text": "Yes and can i get the reference number?",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.7647093534469604
+    }
+  },
+  {
+    "text": "Yes please and i'll need the reference number",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.9675047993659973
+    }
+  },
+  {
+    "text": "yes for 7 at 17:15 on wednesday, I'll need the reference number then too please",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.702836275100708
+    }
+  },
+  {
+    "text": "That was all I needed. Thank you.",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.9361494779586792
+    }
+  },
+  {
+    "text": "Yes, that would be great. Please book for the three of us for 3 nights starting on Friday.",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.739201009273529
+    }
+  },
+  {
+    "text": "Yes, please, for 5 people on saturday.",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.9015141725540161
+    }
+  },
+  {
+    "text": "Yes please. There's 3 of us and we want to check in on Monday and stay for just 2 nights",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.9659203886985779
+    }
+  },
+  {
+    "text": "Yes, for 5 people and for 2 nights please.",
+    "intent": "find_hotel",
+    "intent_prediction": {
+      "name": "book_hotel",
+      "confidence": 0.971991777420044
+    }
+  }
+]
