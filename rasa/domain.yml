@@ -1,41 +1,103 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - find_hotel
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-  utter_hotel_found:
-  - text: "I have found this nice hotel in Recife called Recife Hotel"
-
-  utter_find:
-  - text: "There is a great hotel called Recife Hotel in Recife"
-
+version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet
+- book_hotel
+- find_hotel
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+entities:
+- hotel-area
+- hotel-bookpeople
+- hotel-bookstay
+- hotel-internet
+- hotel-name
+- hotel-parking
+- hotel-pricerange
+- hotel-stars
+- hotel-type
+slots:
+  hotel-bookstay:
+    type: text
+    influence_conversation: false
+  hotel-bookpeople:
+    type: text
+    influence_conversation: false
+  hotel-name:
+    type: text
+    influence_conversation: false
+  hotel-pricerange:
+    type: text
+    influence_conversation: false
+  hotel-stars:
+    type: text
+    influence_conversation: false
+  hotel-type:
+    type: text
+    influence_conversation: false
+  hotel-area:
+    type: text
+    influence_conversation: false
+  hotel-internet:
+    type: text
+    influence_conversation: false
+  hotel-parking:
+    type: text
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_hotel_found:
+  - text: I have found this nice hotel in Recife called Recife Hotel
+  utter_hotel_booked:
+  - text: reservation has been made
+  utter_ask_hotel_info_hotel_stars:
+  - text: you are looking for a hotel with how many starts rate?
+  utter_ask_hotel_info_hotel_pricerange:
+  - text: in what price range are you looking?
+  utter_ask_hotel_info_time:
+  - text: how many nights you want to stay?
+actions:
+- action_search_hotel
+- utter_goodbye
+- utter_greet
+- utter_hotel_booked
+- utter_hotel_found
+forms:
+  hotel_info:
+    required_slots:
+      hotel-stars:
+      - type: from_entity
+        entity: hotel-stars
+      hotel-pricerange:
+      - type: from_entity
+        entity: hotel-pricerange
+      hotel-type:
+      - type: from_entity
+        entity: hotel-type
+      hotel-area:
+      - type: from_entity
+        entity: hotel-area
+      hotel-internet:
+      - type: from_entity
+        entity: hotel-internet
+      hotel-parking:
+      - type: from_entity
+        entity: hotel-parking
