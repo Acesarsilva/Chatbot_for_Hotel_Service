@@ -8,7 +8,7 @@ def find_hotel():
   return random.choice([
     'Recife Hotel', 'Rede Andrade Onda Mar Hotel', 'Bugan Hotel Recife',
     'Transamerica Beach Class', 'Park Hotel', 'Recife Plaza Hotel',
-    'Bianca Praia Hotel', 'Hotel Aconchego Recife'
+    'Bianca Praia Hotel', 'Hotel Aconchego Recife', 'huntingdon marriott hotel'
   ])
 
 def hotel_options():
